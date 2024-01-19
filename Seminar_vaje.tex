@@ -1,0 +1,87 @@
+\documentclass[]{beamer}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[slovene]{babel}
+\usepackage{pgfpages}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{colortbl}
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+\usetikzlibrary{automata}
+\usepackage{array}
+
+\setbeameroption{hide notes}
+%\setbeameroption{show only notes}                  
+%\setbeameroption{show notes on second screen=right}
+
+\mode<presentation>
+\usetheme{Berlin}
+\useinnertheme[shadows]{rounded}
+\useoutertheme{infolines}
+\usecolortheme{seahorse}
+\usepackage{palatino}
+\usefonttheme{serif}
+
+\beamertemplatenavigationsymbolsempty
+%\setbeamertemplate{headline}{}
+%\setbeamertemplate{footline}{}
+		
+\title[Rešitve nalog]{Rešitve nalog za seminar}
+\author[]{Anej Rozman, Jošt Plevel, Tanja Luštrek, Lucija Tekavc}
+\institute[Mentor: doc. dr. Martin Raič]{Fakulteta za matematiko in fiziko}
+\date[]{}
+
+\begin{document}
+
+\maketitle
+
+\begin{frame}{1. Naloga}
+    Mečemo pošten kovanec, meti so neodvisni. Za $n = 0, 1, 2, \ldots$ naj bo $X_n$ skupno število grbov v $(n + 1)$-tem in $(n + 2)$-tem metu (torej $0$, $1$ in $2$). Ali zaporedje $X_1, X_2, X_3, \ldots$ tvori Markovsko verigo?
+
+
+\end{frame}
+
+
+
+\begin{frame}{2. Naloga}
+
+    Dana je Markovska veriga s prehodno matriko:
+$$ p =
+    \begin{bmatrix}
+        0 & 0 & 0{,}1 & 0{,}9 \\
+        0 & 0 & 0{,}6 & 0{,}4 \\
+        0{,}8 & 0{,}2 & 0 & 0 \\
+        0{,}4 & 0{,}6 & 0 & 0 \\
+    \end{bmatrix}
+$$       
+
+a) Izračunajte vse stacionarne porazdelitve markovskih verig s prehodnima matrikama $p$ in $p^2$. \newline
+b) Izračunajte $\lim_{n\to\infty} p^{2n}$
+
+\end{frame}
+
+
+
+\begin{frame}{3. Naloga}
+
+    S police v čitalnici, na kateri je $n$ knjig, se $k$-ta knjiga vzame z verjetnostjo $p_k$. Ko
+    obiskovalec pogleda knjigo, jo knjižničar vrne in postavi na najbolj levo mesto na polici,
+    preostale knjige pa se ustrezno zamaknejo desno. Privzamemo, da se s police vsakič vzame
+    le po ena knjiga in da so jemanja med seboj neodvisna. Tako dobimo markovsko verigo,
+    katere stanja so permutacije množice ${1, 2, \ldots, n}$, torej zaporedja $(k_1, k_2, \ldots, k_n)$, kjer je
+    $k_i$ številka knjige na $i$-tem mestu. Dokažite, da verjetnostna funkcija:
+
+$$
+\pi(k_1, k_2, \ldots, k_n) = p_{k_1} \cdot \dfrac{p_{k_2}}{1 - p_{k_1}} \cdot \dfrac{p_{k_3}}{1 - p_{k_1} - p_{k_2}} \cdots \dfrac{p_{k_n}}{1 - p_{k_1} - p_{k_2} - \ldots - p_{k_{n-1}}}
+$$
+
+predstavlja stacionarno porazdelitev te markovske verige.
+\end{frame}
+
+
+
+
+
+
+\end{document}
